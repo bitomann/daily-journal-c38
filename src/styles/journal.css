@@ -2,7 +2,35 @@ body {
     background-color: gray;
 }
 
+h1 {
+    text-shadow: 0.1px .7px rgb(185, 185, 185);
+    font-family: 'Courier New', Courier, monospace;
+}
+
 label {
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
+    text-shadow: 0.1px .7px rgb(185, 185, 185);
 }
+
+input, textarea, select {
+    border:none;
+    border-radius:5px;
+    box-shadow:0 0 5px #666 inset;
+    height:25px;
+    line-height:25px;
+    width:200px;
+    text-indent:5px;
+ }
+
+ button {
+    background-color: #636363;
+    border:none;
+    border-radius:5px;
+    box-shadow:0 0 5px rgb(22, 22, 22) inset;
+    height:25px;
+    line-height:25px;
+    width:150px;
+    font-family: 'Courier New', Courier, monospace;
+ }
