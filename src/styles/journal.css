@@ -3,34 +3,51 @@ body {
 }
 
 h1 {
-    text-shadow: 0.1px .7px rgb(185, 185, 185);
     font-family: 'Courier New', Courier, monospace;
+}
+
+fieldset {
+    border: 0;
 }
 
 label {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, 
+    monospace;
     display: flex;
     flex-direction: column;
-    text-shadow: 0.1px .7px rgb(185, 185, 185);
+    text-shadow: 0.1px .7px rgb(165, 165, 165);
 }
 
-input, textarea, select {
+input, select {
     border:none;
     border-radius:5px;
     box-shadow:0 0 5px #666 inset;
     height:25px;
     line-height:25px;
     width:200px;
-    text-indent:5px;
+    text-indent:10px;
+ }
+
+ textarea {
+    border:none;
+    border-radius:5px;
+    box-shadow:0 0 5px #666 inset;
+    height:50px;
+    line-height:250px;
+    width:200px;
+    text-indent:10px;
  }
 
  button {
+    font-weight: 550;
     background-color: #636363;
-    border:none;
+    /* border: none; */
+    border:1px solid rgb(100, 100, 100);
     border-radius:5px;
-    box-shadow:0 0 5px rgb(22, 22, 22) inset;
+    box-shadow:1px 3px 10px rgb(22, 22, 22) ;
     height:25px;
     line-height:25px;
     width:150px;
     font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0.1px .5px rgb(130, 130, 130);
  }
