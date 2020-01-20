@@ -29,3 +29,20 @@ const journalEntryTwo = {
 const allJournalEntries = []
 allJournalEntries.push(journalEntry1)
 console.log(allJournalEntries);
+
+const makeJournalEntryComponent = ( date,concepts, journalEntry, mood ) => {
+    return `
+    <div class= journalEntry>
+        <h1>${date}</h1>
+        <section>${concepts}</section>
+        <aside>${journalEntry}</aside>
+        <h3>${mood}</h3
+    </div>       
+    `
+}
+
+const renderJournalEntries = (allJournalEntries) => {
+
+}
+
+renderJournalEntries(allJournalEntries)
