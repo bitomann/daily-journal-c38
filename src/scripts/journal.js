@@ -1,48 +1,58 @@
-console.log("Hola!");
-
-const journalEntry1 = [
-    {
+const journalEntries = [{
         date: "01/14/2020",
         concepts: "Restarting the front-end",
-        journalEntry: "Here I go again, but I have a much more positive outlook this time and a better plan for studying",
+        entry: "Here I go again, but I have a much more positive outlook this time and a better plan for studying",
         mood: "positive"
     },
     {
         date: "10/15/2020",
         concepts: "Group Project 1",
-        journalEntry: "Things were a lot easier for me this time around. My understanding of GitHub has grown exponential",
+        entry: "Things were a lot easier for me this time around. My understanding of GitHub has grown exponential",
         mood: "motivated"
     },
     {
         date: "01/16/2020",
         concepts: "THE DOM",
-        journalEntry: "Objects, loops, and arrays clicked for me today.",
+        entry: "Objects, loops, and arrays clicked for me today.",
         mood: "Ecstatic"
     }
 ]
-console.log(journalEntry1);
+console.log(journalEntries);
 
-const journalEntryTwo = {
+// const allJournalEntries = []
+// allJournalEntries.push(journalEntries)
+// console.log(allJournalEntries);
 
-}
+// for (let i = 0; i < journalEntries.length; i++) {
+//     const element = journalEntries[i];
+// }
 
-const allJournalEntries = []
-allJournalEntries.push(journalEntry1)
-console.log(allJournalEntries);
-
-const makeJournalEntryComponent = ( date,concepts, journalEntry, mood ) => {
+const journalEntryFactory = (journalEntry) => {
     return `
     <div class= journalEntry>
-        <h1>${date}</h1>
-        <section>${concepts}</section>
-        <aside>${journalEntry}</aside>
-        <h3>${mood}</h3
-    </div>       
+        <h1>${journalEntry.date}</h1>
+         <section>${journalEntry.concepts}
+         </section>
+        <aside>${journalEntry.entry}</aside>
+        <h3>${journalEntry.mood}</h3
+    </div>entry  
     `
 }
+const renderEntries = (entries) => {
+    const entryContainer = document.querySelector(".entryLog")
+    entries.forEach(entry => {
+        const entryHtml = journalEntryFactory(entry);
+        entryContainer.innerHTML += entryHtml
+    });
+};
 
-const renderJournalEntries = (allJournalEntries) => {
 
-}
+renderEntries(journalEntries)
 
-renderJournalEntries(allJournalEntries)
+
+// journalEntries.forEach(printEntries => journalEntries.innerHTML += `<div class= journalEntry>
+// <h1>${journalEntry.date}</h1>
+// <section>${journalEntry.concepts}</section>
+// <aside>${journalEntry.entry}</aside>
+// <h3>${journalEntry.mood}</h3
+// </div>`)
