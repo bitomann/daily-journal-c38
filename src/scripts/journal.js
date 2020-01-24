@@ -1,3 +1,6 @@
+import apiManager from "./apiManager"
+import renderEntries from "./entryComponent"
+
 /*
     Main application logic that uses the functions and objects
     defined in the other JavaScript files.

@@ -1,3 +1,4 @@
+
 const journalEntryFactory = (journalEntry) => {
     return `
     <div class= journalEntry>
@@ -9,3 +10,5 @@ const journalEntryFactory = (journalEntry) => {
     </div>
     `;
 };
+
+export default journalEntryFactory

@@ -1,3 +1,5 @@
+import journalEntryFactory from "./entriesDOM"
+
 const renderEntries = (entries) => {
     const entryLogContainer = document.querySelector("#entryLog")
     entries.forEach(entry => {
@@ -23,3 +25,5 @@ const renderEntries = (entries) => {
 //         })
 //     }
 // }
+
+export default renderEntries
