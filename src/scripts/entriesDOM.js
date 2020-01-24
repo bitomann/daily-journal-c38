@@ -9,12 +9,3 @@ const journalEntryFactory = (journalEntry) => {
     </div>
     `;
 };
-
-
-const renderEntries = (entries) => {
-    const entryLogContainer = document.querySelector("#entryLog")
-    entries.forEach(entry => {
-        const entryHtml = journalEntryFactory(entry);
-        entryLogContainer.innerHTML += entryHtml
-    });
-};
