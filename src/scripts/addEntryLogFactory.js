@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/src/styles/journal.css" type="text/css">
-
-    <title>Daily Journal</title>
-</head>
-
-<body>
-    <!-- <form action="">
+const buildEntryLogForm = () =>
+`
+<form action="">
         <fieldset>
             <h1>Bito's Daily Journal</h1>
             <label for="journalDAte">Date Of Entry
@@ -44,21 +33,13 @@
             </select>
         </fieldset>
     </form>
+
     <form action="">
         <fieldset>
-            <button value="recordJournalEntry">Record Journal Entry
+            <button id="addEntry" value="recordJournalEntry">Record Journal Entry
             </button>
         </fieldset>
-    </form> -->
+    </form>
+    `;
 
-    <article id="entryForm"></article>
-    <article id="entryLog"></article>
-
-    <!-- vvv API/fetch on top vvv -->
-    <!-- <script src="/src/scripts/apiManager.js"></script>
-    <script src="/src/scripts/entryComponent.js"></script>
-    <script src="/src/scripts/entriesDOM.js"></script> -->
-    <script type="module" src="/src/scripts/journal.js"></script>
-</body>
-
-</html>
+    export default buildEntryLogForm
