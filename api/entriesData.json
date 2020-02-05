@@ -1,26 +1,32 @@
 {
-
-    "journalEntries": [
+  "journalEntries": [
     {
-    "id": 1,
-    "date": "01/14/2020",
-    "concepts": "Restarting the front-end",
-    "entry": "Here I go again, but I have a much more positive outlook this time and a better plan for studying",
-    "mood": "positive"
-},
-{
-    "id": 2,
-    "date": "10/15/2020",
-    "concepts": "Group Project 1",
-    "entry": "Things were a lot easier for me this time around. My understanding of GitHub has grown exponential",
-    "mood": "motivated"
-},
-{
-    "id": 3,
-    "date": "01/16/2020",
-    "concepts": "THE DOM",
-    "entry": "Objects, loops, and arrays clicked for me today.",
-    "mood": "Ecstatic"
-}
-]
+      "id": 1,
+      "date": "01/14/2020",
+      "concepts": "Restarting the front-end",
+      "entry": "Here I go again, but I have a much more positive outlook this time and a better plan for studying",
+      "mood": "positive"
+    },
+    {
+      "id": 2,
+      "date": "10/15/2020",
+      "concepts": "Group Project 1",
+      "entry": "Things were a lot easier for me this time around. My understanding of GitHub has grown exponential",
+      "mood": "motivated"
+    },
+    {
+      "id": 3,
+      "date": "01/16/2020",
+      "concepts": "THE DOM",
+      "entry": "Objects, loops, and arrays clicked for me today.",
+      "mood": "Ecstatic"
+    },
+    {
+      "date": "2020-02-03",
+      "concepts": "HELLO",
+      "entry": "wow",
+      "mood": "Brain Dead",
+      "id": 4
+    }
+  ]
 }
