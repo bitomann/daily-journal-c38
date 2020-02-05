@@ -1,13 +1,7 @@
-
 const entryComponentsToDom = {
 
     journalEntryComponent(journalEntry) {
 
-    // console.log("JOURNAL ENTRY", journalEntry.id)
-    // console.log("JOURNAL ENTRY", journalEntry.date)
-    // console.log("JOURNAL ENTRY", journalEntry.concepts)
-    // console.log("JOURNAL ENTRY", journalEntry.entry)
-    // console.log("JOURNAL ENTRY", journalEntry.mood)
         return `
     <section class="journal--${journalEntry.id}>
         <h1 class="journal-date">
