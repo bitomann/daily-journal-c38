@@ -1,22 +1,40 @@
-import apiActions from "./apiManager"
-import JournalEntryComponent from './entriesDOM.js'
+import data from "./data.js"
+// import entryComponentsToDom from './entryComponent.js'
+import renderEntries from './renderEntryList.js'
 
-const entryLogContainer = document.querySelector("#entryLog")
+const journalForm = document.querySelector("#journalForm")
+const journalList = document.querySelector("#journalList")
 
-export default {
-    journalEntryDeleteEventListener: () => {
-        
+const events = {
+
+    journalEntryEventListener: () => {
+        const addButton = document.querySelector("#addEntry");
+
+        addButton.addEventListener("click", (event) => {
+            event.preventDefault()
+            const dateInput = document.querySelector("#journalDate");
+            const conceptsInput = document.querySelector("#conceptsCovered");
+            const entryInput = document.querySelector("#journalEntry");
+            const moodSelector = document.querySelector("#moodForTheDay");
+
+            const log = {
+                date: dateInput.value,
+                concepts: conceptsInput.value,
+                entry: entryInput.value,
+                mood: moodSelector.value
+            };
+
+            data.addJournalEntry(log)
+                .then(() => {
+                    data.getAllJournalEntries()
+                        .then(renderEntries);
+                });
+        });
     }
+
+    // journalEntryDeleteEventListener: () => {
+
+    // }
 }
 
-
-// const domFiller = {
-//     renderEntries: (entries) => {
-//         entries.forEach(entry => {
-//             const entryHtml = JournalEntryComponent.journalEntryFactory(entry);
-//             entryLogContainer.innerHTML += entryHtml
-//         });
-//     }
-// };
-
-// export default domFiller
+export default events

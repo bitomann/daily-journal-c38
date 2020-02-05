@@ -1,11 +1,11 @@
-import apiManager from './apiManager.js'
-import renderLogs from './entryLogList.js'
-import buildJournalEntryLog from './entryAddFormToDom.js'
-import addEntryLogEventListener from './addEntryLogEvents.js'
+import renderEntries from './renderEntryList.js'
+import events from './events.js'
+import entryComponentsToDom from './entryComponent.js'
+import data from './data.js';
 
 // vvv abracadabra form! vvv //
-buildJournalEntryLog();
-addEntryLogEventListener();
+entryComponentsToDom.journalFormComponent();
 
-apiManager.getAllJournalEntries()
-    .then(renderLogs)
+data.getAllJournalEntries()
+    .then(renderEntries)
+    .then(events.journalEntryEventListener);

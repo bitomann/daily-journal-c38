@@ -1,18 +1,18 @@
-const baseUrl = "http://localhost:8080/"
+const baseUrl = "http://localhost:8080"
 
 export default {
 
     getAllJournalEntries() {
         return fetch(`${baseUrl}/journalEntries`)
-            .then(response => response.json);
+            .then(response => response.json());
     },
-    addJournalEntry(entry) {
+    addJournalEntry(journalEntry) {
         return fetch(`${baseUrl}/journalEntries`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(entry)
+            body: JSON.stringify(journalEntry)
         });
     },
     // deleteJournalEntry(entryId) {

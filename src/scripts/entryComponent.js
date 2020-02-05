@@ -1,6 +1,33 @@
-const buildEntryLogForm = () =>
-`
-<form action="">
+
+const entryComponentsToDom = {
+
+    journalEntryComponent(journalEntry) {
+
+    // console.log("JOURNAL ENTRY", journalEntry.id)
+    // console.log("JOURNAL ENTRY", journalEntry.date)
+    // console.log("JOURNAL ENTRY", journalEntry.concepts)
+    // console.log("JOURNAL ENTRY", journalEntry.entry)
+    // console.log("JOURNAL ENTRY", journalEntry.mood)
+        return `
+    <section class="journal--${journalEntry.id}>
+        <h1 class="journal-date">
+        DATE: ${journalEntry.date}
+        </h1>
+        <h3 class="journal-concepts">
+        CONCEPTS: ${journalEntry.concepts}
+        </h3>
+        <aside class="journal-entry">
+        ENTRY: ${journalEntry.entry}</aside>
+        <h4 class="journal-mood">MOOD: ${journalEntry.mood}
+        </h4>
+    </section>
+    `
+    },
+
+    journalFormComponent() {
+        const entryLog = document.querySelector("#journalForm");
+        entryLog.innerHTML = `
+    <form action="">
         <fieldset>
             <h1>Bito's Daily Journal</h1>
             <label for="journalDAte">Date Of Entry
@@ -41,5 +68,6 @@ const buildEntryLogForm = () =>
         </fieldset>
     </form>
     `;
-
-    export default buildEntryLogForm
+    }
+}
+export default entryComponentsToDom
