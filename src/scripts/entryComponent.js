@@ -4,12 +4,12 @@ const entryComponentsToDom = {
 
         return `
     <section class="journal--${journalEntry.id}>
-        <h1 class="journal-date">
-        DATE: ${journalEntry.date}
-        </h1>
-        <h3 class="journal-concepts">
+        <h1 class="journal-concepts">
         CONCEPTS: ${journalEntry.concepts}
-        </h3>
+        </h1>
+        <h4 class="journal-date">
+        DATE: ${journalEntry.date}
+        </h4>
         <aside class="journal-entry">
         ENTRY: ${journalEntry.entry}</aside>
         <h4 class="journal-mood">MOOD: ${journalEntry.mood}
@@ -59,6 +59,23 @@ const entryComponentsToDom = {
         <fieldset>
             <button id="addEntry" value="recordJournalEntry">Record Journal Entry
             </button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Filter Journal Entries by Mood</legend>
+            <div>
+                <label for="ecstatic">Ecstatic</label>
+                <input type="radio" id="ecstatic" name="moodFilter" value="1" checked>
+                
+                <label for="motivated">Motivated</label>
+                <input type="radio" id="motivated" name="moodFilter" value="2" checked>
+                
+                <label for="frustrated">Frustrated</label>
+                <input type="radio" id="frustrated" name="moodFilter" value="3" checked>
+                
+                <label for="brainDead">Brain Dead</label>
+                <input type="radio" id="brainDead" name="moodFilter" value="4" checked>
+            </div>
         </fieldset>
     </form>
     `;

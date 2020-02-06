@@ -27,6 +27,13 @@
       "entry": "wow",
       "mood": "Brain Dead",
       "id": 4
+    },
+    {
+      "date": "2020-02-06",
+      "concepts": "Filter",
+      "entry": "Working on it",
+      "mood": "Motivated",
+      "id": 5
     }
   ]
 }

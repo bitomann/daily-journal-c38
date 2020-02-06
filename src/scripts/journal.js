@@ -9,3 +9,5 @@ entryComponentsToDom.journalFormComponent();
 data.getAllJournalEntries()
     .then(renderEntries)
     .then(events.journalEntryEventListener);
+
+events.radioButtonFilterEventListener()
