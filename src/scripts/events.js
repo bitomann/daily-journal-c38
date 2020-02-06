@@ -1,5 +1,5 @@
 import data from "./data.js"
-// import entryComponentsToDom from './entryComponent.js'
+import entryComponentsToDom from './entryComponent.js'
 import renderEntries from './renderEntryList.js'
 
 const journalForm = document.querySelector("#journalForm")
@@ -30,11 +30,22 @@ const events = {
                         .then(renderEntries);
                 });
         });
+    },
+
+    radioButtonFilterEventListener: () => {
+        const radioButton = document.getElementsByName("moodFilter");
+        console.log(radioButton)
+        radioButton.forEach(moodFilter => {
+            moodFilter.addEventListener("click", (event) => {
+                const RadioMood = event.target.value;
+                data.getAllJournalEntries()
+                    .then((entries) => {
+                        const filteredEntries = entries.filter(entry => entry.mood === RadioMood);
+                        entryComponentsToDom.journalEntryComponent(filteredEntries);
+                        console.log("RADIO")
+                    });
+            });
+        })
     }
-
-    // journalEntryDeleteEventListener: () => {
-
-    // }
 }
-
 export default events
