@@ -19,9 +19,10 @@ export default {
         return fetch(`${baseUrl}/journalEntries?&_expand=mood&moodId=${filterByMood}`)
             .then(response => response.json())
     },
-    // deleteJournalEntry(entryId) {
-    //     return fetch(`${baseUrl}/journalEntries/${entryId}`, {
-    //        method: "DELETE" 
-    //     });
-    // }
+    
+    deleteJournalEntry(entryId) {
+        return fetch(`${baseUrl}/journalEntries/${entryId}`, {
+           method: "DELETE" 
+        });
+    }
 }
