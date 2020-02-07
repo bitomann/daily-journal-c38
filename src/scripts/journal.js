@@ -12,3 +12,4 @@ data.getAllJournalEntries()
 
 events.radioButtonFilterEventListener()
 // console.log(events.radioButtonFilterEventListener)
+// entryComponentsToDom.journalEntryComponent(filteredEntries)
