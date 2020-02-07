@@ -57,6 +57,34 @@ const events = {
             });
         })
     })
+},
+
+entryDeleteEventListener: () => {
+
+    journalList.addEventListener("click", (event) => {
+        
+        if (event.target.id.startsWith("deleteEntry--")) {
+            const deleteBtnId = event.target.id;
+            const deleteBtnArray = deleteBtnId.split("--");
+            const entryIdToDelete = deleteBtnArray[1];
+            
+            // const entryId = event.target.id.split("--")[1]
+            
+            data.deleteJournalEntry(entryIdToDelete)
+            .then(data.getAllJournalEntries)
+            .then(renderEntries);
+        } 
+        console.log("DELETE CLICK");
+        // else if (event.target.id.startsWith("editEntry--")) {
+        //     const entryIdToEdit = event.target.id.split("--")[1]
+
+        //     /*
+        //         This function will get the recipe from the API
+        //         and populate the form fields (see below)
+        //     */
+        //     updateFormFields(entryIdToEdit)
+        // }
+    })
 }
 }
 export default events

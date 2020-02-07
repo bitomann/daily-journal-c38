@@ -14,7 +14,13 @@ const entryComponentsToDom = {
         ENTRY: ${journalEntry.entry}</aside>
         <h4 class="journal-mood">MOOD: ${journalEntry.mood}
         </h4>
-    </section>
+        </section>
+        <button id="deleteEntry--${journalEntry.id}">Delete</button>
+        <button id="editEntry--">Edit</button>
+        <br>
+        <br>
+        <br>
+        <br>
     `
     },
 
@@ -25,21 +31,21 @@ const entryComponentsToDom = {
         <fieldset>
             <h1>Bito's Daily Journal</h1>
             <label for="journalDAte">Date Of Entry
-                <input type="date" name="journalDate" id="journalDate">
+                <input type="date" name="journalDate" class="formInput" id="journalDate">
             </label>
         </fieldset>
     </form>
     <form action="">
         <fieldset>
             <label for="conceptsCovered">Concepts Covered
-                <input type="input" name="conceptsCovered" id="conceptsCovered">
+                <input type="input" name="conceptsCovered" class="formInput" id="conceptsCovered">
             </label>
         </fieldset>
     </form>
     <form action="">
         <fieldset>
             <label for="journalEntry">Journal Entry
-                <textarea name="journalEntry" id="journalEntry" cols="30" rows="1"></textarea>
+                <textarea name="journalEntry" class="formInput" id="journalEntry" cols="30" rows="1"></textarea>
             </label>
         </fieldset>
     </form>
@@ -57,13 +63,14 @@ const entryComponentsToDom = {
 
     <form action="">
         <fieldset>
-            <button id="addEntry" value="recordJournalEntry">Record Journal Entry
+            <button id="addEntry" value="recordJournalEntry">
+            Record
             </button>
         </fieldset>
 
         <fieldset>
             <legend>Filter Journal Entries by Mood</legend>
-            <div>
+            <div class="radioButtons">
                 <label for="ecstatic">Ecstatic</label>
                 <input type="radio" id="ecstatic" name="moodFilter" value="1" checked>
                 
@@ -76,6 +83,7 @@ const entryComponentsToDom = {
                 <label for="brainDead">Brain Dead</label>
                 <input type="radio" id="brainDead" name="moodFilter" value="4" checked>
             </div>
+            <br>
         </fieldset>
     </form>
     `;

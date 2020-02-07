@@ -10,6 +10,9 @@ data.getAllJournalEntries()
     .then(renderEntries)
     .then(events.journalEntryEventListener);
 
-events.radioButtonFilterEventListener()
+events.radioButtonFilterEventListener();
+events.entryDeleteEventListener();
+// console.log("DELETE CLICK");
+
 // console.log(events.radioButtonFilterEventListener)
 // entryComponentsToDom.journalEntryComponent(filteredEntries)
