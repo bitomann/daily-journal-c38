@@ -1,6 +1,7 @@
 const entryComponentsToDom = {
 
     journalEntryComponent(journalEntry) {
+        const moodInitialCap = journalEntry.mood.charAt(0).toUpperCase() + journalEntry.mood.slice(1) 
 
         return `
     <section class="journal--${journalEntry.id}>
@@ -12,7 +13,7 @@ const entryComponentsToDom = {
         </h4>
         <aside class="journal-entry">
         ENTRY: ${journalEntry.entry}</aside>
-        <h4 class="journal-mood">MOOD: ${journalEntry.mood}
+        <h4 class="journal-mood">MOOD: ${moodInitialCap}
         </h4>
         </section>
         <button id="deleteEntry--${journalEntry.id}">Delete</button>
@@ -53,10 +54,10 @@ const entryComponentsToDom = {
         <fieldset>
             <label for="moodForTheDay">Mood For The Day</label>
             <select id=moodForTheDay class="moodForTheDay" name="moodForTheDay">
-                <option value="Ecstatic">Ecstatic</option>
-                <option value="Motivated">Motivated</option>
-                <option value="Frustrated">Frustrated</option>
-                <option value="Brain Dead">Brain Dead</option>
+                <option value="ecstatic">Ecstatic</option>
+                <option value="motivated">Motivated</option>
+                <option value="frustrated">Frustrated</option>
+                <option value="brainDead">Brain Dead</option>
             </select>
         </fieldset>
     </form>

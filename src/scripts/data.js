@@ -16,7 +16,7 @@ export default {
         });
     },
     moodFilter: (filterByMood) => {
-        return fetch(`${baseUrl}/journalEntries?&_expand=mood&moodId=${filterByMood}`)
+        return fetch(`${baseUrl}/journalEntries?mood=${filterByMood}`)
             .then(response => response.json())
     },
     
