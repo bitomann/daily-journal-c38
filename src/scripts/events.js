@@ -33,28 +33,14 @@ const events = {
     },
 
     radioButtonFilterEventListener: () => {
-        const radioButton = document.getElementsByName("moodFilter");
+        const radioButtons = document.getElementsByName("moodFilter");
         //  console.log(radioButton);
-        radioButton.forEach(moodFilter => {
-            moodFilter.addEventListener("click", (event) => {
-                const radioMood = event.target.value;
-                // console.log("RADIO CLICK");
-                // ^^^ function to add events listeners using forEach loop ^^^
-                // ^^^ to target all radio buttons at once rather than individually ^^^ //
-
-                // vvv 
-                data.getAllJournalEntries()
-                    .then(entries => {
-                        const filteredEntries = entries.filter(entry => {
-                            let myMood = false
-                            if (entry.radioMood === radioMood) {
-                                myMood = true
-                            }
-                            console.log(myMood)
-                            return myMood
-                    });
-                    data.moodFilter(filteredEntries)
-            });
+        radioButtons.forEach(button => {
+            button.addEventListener("click", (event) => {
+            //    debugger
+                const radioMood = event.target.id;
+                    data.moodFilter(radioMood)
+                    .then(renderEntries);
         })
     })
 },

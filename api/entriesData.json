@@ -19,14 +19,28 @@
       "date": "01/16/2020",
       "concepts": "THE DOM",
       "entry": "Objects, loops, and arrays clicked for me today.",
-      "mood": "Ecstatic"
+      "mood": "ecstatic"
     },
     {
       "date": "2020-02-07",
       "concepts": "Snow Day!",
       "entry": "Keepin' on Keepin, on with Daily Journal",
-      "mood": "Motivated",
+      "mood": "motivated",
       "id": 6
+    },
+    {
+      "date": "2020-02-10",
+      "concepts": "WTF",
+      "entry": "JSON STUFF",
+      "mood": "ecstatic",
+      "id": 7
+    },
+    {
+      "date": "2020-02-07",
+      "concepts": "Radio Filter, Delete",
+      "entry": "WOW! That was really hard... ",
+      "mood": "brainDead",
+      "id": 8
     }
   ]
 }
