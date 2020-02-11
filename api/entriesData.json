@@ -1,39 +1,18 @@
 {
   "journalEntries": [
     {
-      "id": 1,
-      "date": "01/14/2020",
-      "concepts": "Restarting the front-end",
-      "entry": "Here I go again, but I have a much more positive outlook this time and a better plan for studying",
-      "mood": "positive"
-    },
-    {
-      "id": 2,
-      "date": "10/15/2020",
+      "date": "2020-01-15",
       "concepts": "Group Project 1",
       "entry": "Things were a lot easier for me this time around. My understanding of GitHub has grown exponential",
-      "mood": "motivated"
+      "mood": "motivated",
+      "id": 2
     },
     {
       "id": 3,
-      "date": "01/16/2020",
+      "date": "2020-01-06",
       "concepts": "THE DOM",
       "entry": "Objects, loops, and arrays clicked for me today.",
       "mood": "ecstatic"
-    },
-    {
-      "date": "2020-02-07",
-      "concepts": "Snow Day!",
-      "entry": "Keepin' on Keepin, on with Daily Journal",
-      "mood": "motivated",
-      "id": 6
-    },
-    {
-      "date": "2020-02-10",
-      "concepts": "WTF",
-      "entry": "JSON STUFF",
-      "mood": "ecstatic",
-      "id": 7
     },
     {
       "date": "2020-02-07",
@@ -41,6 +20,20 @@
       "entry": "WOW! That was really hard... ",
       "mood": "brainDead",
       "id": 8
+    },
+    {
+      "date": "2020-02-14",
+      "concepts": "awesome",
+      "entry": "tes",
+      "mood": "ecstatic",
+      "id": 9
+    },
+    {
+      "date": "2020-02-10",
+      "concepts": "starlog",
+      "entry": "Captain Kirk is being a jerk!",
+      "mood": "frustrated",
+      "id": 10
     }
   ]
 }

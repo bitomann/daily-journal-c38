@@ -17,7 +17,7 @@ const entryComponentsToDom = {
         </h4>
         </section>
         <button id="deleteEntry--${journalEntry.id}">Delete</button>
-        <button id="editEntry--">Edit</button>
+        <button id="editEntry--${journalEntry.id}">Edit</button>
         <br>
         <br>
         <br>
@@ -29,6 +29,7 @@ const entryComponentsToDom = {
         const entryLog = document.querySelector("#journalForm");
         entryLog.innerHTML = `
     <form action="">
+    <input type="hidden" id="entryId" value="" />
         <fieldset>
             <h1>Bito's Daily Journal</h1>
             <label for="journalDAte">Date Of Entry
@@ -62,7 +63,6 @@ const entryComponentsToDom = {
         </fieldset>
     </form>
 
-    <form action="">
         <fieldset>
             <button id="addEntry" value="recordJournalEntry">
             Record
@@ -86,7 +86,7 @@ const entryComponentsToDom = {
             </div>
             <br>
         </fieldset>
-    </form>
+    
     `;
     }
 }
