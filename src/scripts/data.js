@@ -1,7 +1,7 @@
 const baseUrl = "http://localhost:8080"
 
 export default {
-
+    // vvv promises promises vvv //
     getAllJournalEntries() {
         return fetch(`${baseUrl}/journalEntries`)
             .then(response => response.json());
@@ -11,16 +11,16 @@ export default {
         return fetch(`${baseUrl}/journalEntries/${id}`)
             .then(response => response.json());
     },
-    
+
     addJournalEntry(journalEntry) {
         return fetch(`${baseUrl}/journalEntries`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(journalEntry)
-        })
-        .then(response => response.json())
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(journalEntry)
+            })
+            .then(response => response.json())
     },
 
     moodFilter: (filterByMood) => {
@@ -30,18 +30,18 @@ export default {
 
     editJournalEntry: (editedEntry) => {
         return fetch(`${baseUrl}/journalEntries/${editedEntry.id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(editedEntry)
-        })
-        .then(response => response.json())
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(editedEntry)
+            })
+            .then(response => response.json())
     },
-    
+
     deleteJournalEntry(entryId) {
         return fetch(`${baseUrl}/journalEntries/${entryId}`, {
-           method: "DELETE" 
+            method: "DELETE"
         });
     }
 }
