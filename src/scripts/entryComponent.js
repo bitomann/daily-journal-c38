@@ -1,8 +1,9 @@
 const entryComponentsToDom = {
-
+    // vvv this takes in stuff to build and populate the list of entries to the DOM vvv //
     journalEntryComponent(journalEntry) {
-        const moodInitialCap = journalEntry.mood.charAt(0).toUpperCase() + journalEntry.mood.slice(1) 
-
+        // debugger
+        const moodInitialCap = journalEntry.mood.charAt(0).toUpperCase() + journalEntry.mood.slice(1)
+        // ^^^ why is this still getting in the way, why is mood not defined??? ^^^ //
         return `
     <section class="journal--${journalEntry.id}>
         <h1 class="journal-concepts">
@@ -25,6 +26,7 @@ const entryComponentsToDom = {
     `
     },
 
+    // vvv this builds the form that takes in user input that goes into the list of entries vvv //
     journalFormComponent() {
         const entryLog = document.querySelector("#journalForm");
         entryLog.innerHTML = `
@@ -69,7 +71,7 @@ const entryComponentsToDom = {
             </button>
         </fieldset>
 
-        <fieldset>
+        <fieldset class=filterAndSearch>
             <legend>Filter Journal Entries by Mood</legend>
             <div class="radioButtons">
                 <label for="ecstatic">Ecstatic</label>
@@ -83,11 +85,16 @@ const entryComponentsToDom = {
                 
                 <label for="brainDead">Brain Dead</label>
                 <input type="radio" id="brainDead" name="moodFilter" value="4" checked>
+                
+                <div class="searchContainer">
+                <label for="searchEntries">Search Entries</label>
+                  <input type="text" placeholder="Search Entries..." id="searchInput" name="searchInput">
+                </div>
             </div>
-            <br>
-        </fieldset>
-    
-    `;
+                  <br>
+                  </fieldset>
+                  `;
     }
 }
+
 export default entryComponentsToDom

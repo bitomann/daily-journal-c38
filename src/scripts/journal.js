@@ -12,4 +12,5 @@ data.getAllJournalEntries()
     })
 
 events.radioButtonFilterEventListener();
+events.searchJournalEntries();
 events.entryEventListener();

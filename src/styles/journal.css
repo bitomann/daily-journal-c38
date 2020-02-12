@@ -21,7 +21,7 @@ label {
     text-shadow: 0.1px .7px rgb(165, 165, 165);
 }
 
-.formInput, select {
+.formInput, #searchInput, select {
     border:none;
     border-radius:5px;
     box-shadow:0 0 5px #666 inset;
@@ -55,8 +55,34 @@ label {
     text-shadow: 0.1px .5px rgb(130, 130, 130);
  }
 
- .radioButtons {
+ .filterAndSearch {
      display: flex;
-     justify-content: inherit;
+     justify-content: space-evenly;
      flex-direction: row;
+ }
+
+ #searchBtn {
+    /* font-weight: 550; */
+    background-color: #636363;
+    /* border: none; */
+    border:1px solid rgb(100, 100, 100);
+    border-radius:5px;
+    box-shadow:1px 3px 10px rgb(22, 22, 22) ;
+    height:35px;
+    line-height:35px;
+    width:35px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0.1px .5px rgb(130, 130, 130);
+ }
+
+ img {
+display: flex;
+justify-content: end;
+
+ }
+
+ .searchContainer {
+     display: flex;
+     justify-content: start;
+     flex-direction: column;
  }
